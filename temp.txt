@@ -1,0 +1,75 @@
+# viplist=[]
+# blacklist=[]
+# keeplist=[]
+# userCount=...
+# maxInChat=userCount
+# waitTime=1200
+# def timeout(user):
+#   """Method calls on the API method to timeout the user"""
+#     ...
+# def untimeout(user):
+#   """Method calls on the API method to untimeout the user"""
+#     ...
+# def ban(user):
+#   """Method calls on the API method to ban the user"""
+#     ...
+# def unban(user):
+#     """Method calls on the API method to unban the user"""
+# def blacklist(user):
+#     """Makes sure that the user can not return in a swap"""
+#     ...
+# def whitelist(user):
+#     """makes sure that the user can not be banned in a swap. places them on the VIP list"""
+#     ...
+# def userList():
+#     """returns a list of all users currently in the stream"""
+#     ...
+# def message(message):
+#     """sends a message into chat. Maybe delete it if its already in the API"""
+# def ismod(user):
+#      """checks to see if the user is a moderator"""
+# # def isbot():
+# #     """checks to see if the user is a bot"""
+# def swap(maxUsers):
+#     for spot in range(maxUsers):
+#         candidate=random.choice(userList)
+#         if userList[candidate] not in keeplist or in blacklist:
+#             keeplist.append(userList[candidate])
+#         else:
+#             spot = spot-1
+#     for user in userList:
+#         if user not in viplist and user not in keeplist:
+#             timeout(user)
+#         if user in keeplist or in viplist:
+#             untimeout(user)
+#     keeplist.clear()
+# def checkMessage(message):
+#     author=...
+#     if ismod(author):
+#         if message[:5]=='--max':
+#             try:
+#                 max=int(message[5:])
+#                 if max>len(userList):
+#                     maxInChat=len(userList)
+#                 else:
+#                     maxInChat=max
+#             except:
+#                 print('invalid number')
+#         if message[:10]=='--manswap':
+#             swap(maxInChat)
+#         if message[:7]=='--stime':
+#             try:
+#                 waitTime=int(message[7:])*60
+#             except:
+#                 print('invalid number')
+#         if message[:11]=='--whitelist':
+#             try:
+#                 whitelist(message[:11])
+#             except:
+#                 print('not a user')
+#         if message[:11]=='--blacklist':
+#             try:
+#                 blacklist(message[:11])
+#             except:
+#                 print('not a user')
+#
